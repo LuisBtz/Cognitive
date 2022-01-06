@@ -1,7 +1,12 @@
 module.exports = {
   siteMetadata: {
+    title: `Cognitive`,
+    description: `Description Cognitive`,
+    author: `Cognitive`,
     siteUrl: "https://www.yourdomain.tld",
-    title: "Cognitive",
+    social: {
+      twitter: `Cognitive`,
+    },
   },
   plugins: [
     {
@@ -21,7 +26,7 @@ module.exports = {
       resolve: "gatsby-source-filesystem",
       options: {
         name: "images",
-        path: "./src/images/",
+        path: "./src/assets/images/",
       },
       __key: "images",
     },
