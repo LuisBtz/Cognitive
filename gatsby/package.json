@@ -21,6 +21,7 @@
     "gatsby-plugin-react-helmet": "^5.4.0",
     "gatsby-plugin-sharp": "^4.4.0",
     "gatsby-plugin-sitemap": "^5.4.0",
+    "gatsby-plugin-smoothscroll": "^1.2.0",
     "gatsby-plugin-styled-components": "^5.4.0",
     "gatsby-source-filesystem": "^4.4.0",
     "gatsby-source-sanity": "^7.3.2",
@@ -28,6 +29,7 @@
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "react-helmet": "^6.1.0",
+    "react-parallax": "^3.3.0",
     "styled-components": "^5.3.3"
   }
 }

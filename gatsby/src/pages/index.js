@@ -1,6 +1,10 @@
 import React from "react";
 import Seo from "../components/layout/seo";
 import Layout from "../components/layout/layout";
+import Video from "../components/hero/Video";
+import Joven from "../components/hero/Joven";
+import Nosotros from "../components/nosotros/Nosotros";
+import Servicios from "../components/servicios/Servicios";
 
 
 
@@ -12,7 +16,11 @@ const IndexPage = ({ data }) => {
       <Seo
         title="Home Page" /*image={data.sanityHomePage.exhibitionsHF.thumbnailCover.asset.url} */
       />
-     <p>HomePage</p>
+     <Video />
+     <Joven />
+
+     <Nosotros />
+     <Servicios />
     </Layout>
   );
 };

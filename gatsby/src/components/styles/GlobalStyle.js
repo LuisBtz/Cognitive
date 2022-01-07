@@ -67,4 +67,8 @@ html[xmlns] .clearfix {
   padding: 0 20px;
   box-sizing: border-box;
 }
+
+.padding {
+  padding: 0 50px;
+}
 `

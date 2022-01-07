@@ -1,21 +1,28 @@
-import React from "react";
+import React, { useState } from 'react';
 import styled from "styled-components";
-import { Link } from "gatsby"
+import scrollTo from 'gatsby-plugin-smoothscroll';
 
 const Header = () => {
+  const [menu, showMenu] = useState(false);
 
   return (
     <HeadeContainer>
       <div className="container">
-        <img src='./logo.svg' alt='Logo Cognitive Achievement' />
-        <ul>
-          <li><Link to='/'>Nosotros</Link></li>
-          <li><Link to='/'>Servicios</Link></li>
-          <li><Link to='/'>Synapsis Knowledge</Link></li>
-          <li><Link to='/'>Blog</Link></li>
-          <li><Link to='/'>Contacto</Link></li>
+        <button onClick={() => scrollTo('#home')}><img src='./logo.svg' alt='Logo Cognitive Achievement' /></button>
+        <ul className={menu ? 'show' : 'hide'}>
+          <li><button  onClick={() => scrollTo('#home')}>Nosotros</button ></li>
+          <li><button  onClick={() => scrollTo('#some-id')}>Servicios</button ></li>
+          <li><button  onClick={() => scrollTo('#some-id')}>Synapsis Knowledge</button ></li>
+          <li><button  onClick={() => scrollTo('#some-id')}>Blog</button ></li>
+          <li><button  onClick={() => scrollTo('#some-id')}>Contacto</button ></li>
         </ul>
-      </div>   
+        <button className={menu ? 'ham click' : 'ham'} onClick={() => showMenu(!menu)}>
+            <div className='line'></div>
+            <div className='line'></div>
+            <div className='line'></div>
+        </button>
+      </div> 
+      
     </HeadeContainer>
   );
 };
@@ -24,27 +31,139 @@ const HeadeContainer = styled.nav`
 background: var(--purple);
 color: white;
 padding: 15px 0;
+position: fixed;
+z-index: 2;
+width: 100vw;
 div {
   display: flex;
   justify-content: space-between;
+  position: relative;
+  @media (max-width: 680px) {
+    display: block;
+  }
 }
+button {
+    color: white;
+    text-align: center;
+    background: none;
+    border: none;
+    outline: none;
+    cursor: pointer;
+  }
 ul {
   display: flex;
   align-self: center;
-  a {
-    color: white;
-    
+  position: relative;
+  @media (max-width: 680px) {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            height: 100%;
+            padding-top: 50px;
+            padding-bottom: 50px;
+            padding-right: 50px;
+            li {
+                text-align: right;
+                padding-bottom: 10px;
+                &::before {
+                  display: none;
+                }
+                button {
+                    font-size: 1.5rem;
+                    &:hover {
+                        text-decoration: underline;
+                    }
+                }
+            }
   }
+
   li {
-    margin-left: 25px;
+    margin-left: 15px;
+    margin-right: 15px;
+    text-align: center;
+    position: relative;
+    &::before {
+        content: ""; 
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        bottom: -10px;
+        left: 0;
+        background-color: white;
+        visibility: hidden;
+        -webkit-transform: scaleX(0);
+        transform: scaleX(0);
+        -webkit-transition: all 0.3s ease-in-out 0s; 
+        transition: all 0.3s ease-in-out 0s; 
+    }   
+
     &:hover {
-      text-decoration: underline;
-    }
+        color: white;
+
+        &::before {
+            visibility: visible;
+            -webkit-transform: scaleX(1);
+            transform: scaleX(1);
+        }   
+    } 
+  }
+}
+
+ul.show {
+  @media (max-width: 680px) {
+    display: block;
+  }
+  
+}
+
+ul.hide {
+  @media (max-width: 680px) {
+    display: none;
   }
 }
 img {
   width: 120px;
 }
+
+  .click {
+            .line {
+                &:nth-child(2) {
+                    opacity: 0;
+                }
+                &:nth-child(1) {
+                    position: relative;
+                    top: 10px;
+                    transform: rotate(45deg);
+                }
+                &:nth-child(3) {
+                    position: relative;
+                    bottom: 10px;
+                    transform: rotate(-45deg);
+                }
+            }
+        }
+
+.ham {
+            display: none;
+            @media (max-width: 680px) {
+                display: block;
+                width: 30px;
+                height: 30px;
+                position: absolute;
+                top: 15px;
+                right: 25px;
+                background: none;
+                border: none;
+                outline: none;
+                .line {
+                    width: 100%;
+                    height: 1px;
+                    margin-bottom: 9px;
+                    background-color: white;
+                    transition: all 250ms ease-in-out;
+                }
+            }
+        }
 `;
 
 export default Header;

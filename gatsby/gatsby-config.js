@@ -21,6 +21,7 @@ module.exports = {
     "gatsby-plugin-react-helmet",
     "gatsby-plugin-sitemap",
     "gatsby-plugin-sharp",
+    "gatsby-plugin-smoothscroll",
     "gatsby-transformer-sharp",
     {
       resolve: "gatsby-source-filesystem",
