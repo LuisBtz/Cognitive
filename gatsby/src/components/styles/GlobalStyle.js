@@ -68,6 +68,10 @@ html[xmlns] .clearfix {
   box-sizing: border-box;
 }
 
+.full {
+  width: 100% !important;
+}
+
 .padding {
   padding: 0 50px;
 }

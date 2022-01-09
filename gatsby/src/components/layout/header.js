@@ -10,10 +10,9 @@ const Header = () => {
       <div className="container">
         <button onClick={() => scrollTo('#home')}><img src='./logo.svg' alt='Logo Cognitive Achievement' /></button>
         <ul className={menu ? 'show' : 'hide'}>
-          <li><button  onClick={() => scrollTo('#home')}>Nosotros</button ></li>
-          <li><button  onClick={() => scrollTo('#some-id')}>Servicios</button ></li>
+          <li><button  onClick={() => scrollTo('#nosotros')}>Nosotros</button ></li>
+          <li><button  onClick={() => scrollTo('#servicios')}>Servicios</button ></li>
           <li><button  onClick={() => scrollTo('#some-id')}>Synapsis Knowledge</button ></li>
-          <li><button  onClick={() => scrollTo('#some-id')}>Blog</button ></li>
           <li><button  onClick={() => scrollTo('#some-id')}>Contacto</button ></li>
         </ul>
         <button className={menu ? 'ham click' : 'ham'} onClick={() => showMenu(!menu)}>
