@@ -3,7 +3,7 @@ import { Normalizer } from "../styles/Normalizer"
 import { GlobalStyle } from "../styles/GlobalStyle"
 import { Typography } from "../styles/Typography"
 import Header from '../layout/header'
-import Footer from '../layout/Footer'
+import Footer from '../layout/footer'
 // import Footer from "./footer"
 
 
