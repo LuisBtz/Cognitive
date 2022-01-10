@@ -14,7 +14,6 @@ module.exports = {
       options: {
         projectId: "4kw3lxki",
         dataset: "production",
-        token: process.env.SANITY_GATSBY,
         watchMode: true,
       },
     },
