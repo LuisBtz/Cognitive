@@ -7,6 +7,7 @@ import Nosotros from "../components/nosotros/Nosotros";
 import Servicios from "../components/servicios/Servicios";
 import Blog from "../components/blog/Blog";
 import { graphql } from 'gatsby'
+import Contacto from "../components/contacto/Contacto";
 
 
 export const data = graphql`
@@ -36,6 +37,7 @@ const IndexPage = ({ data }) => {
      <Nosotros />
      <Servicios />
      <Blog data={data} />
+     <Contacto />
     </Layout>
   );
 };

@@ -21,7 +21,8 @@ const Blog = ({data}) => {
                 </ul>
             </div>
          </div>
-
+         <div className='blogBg'>
+         </div>
 
 
         </BlogContenedor>
@@ -31,12 +32,16 @@ const Blog = ({data}) => {
 const BlogContenedor = styled.section`
 position: relative;
 width: 100%;
-padding-bottom: 50px;
 .container {
     display: block;
     padding-bottom: 50px;
+    @media (max-width: 680px) {
+            margin: 0 auto;
+            text-align: center;
+        }
     .logo {
         width: 40%;
+        
     }
     @media (max-width: 680px) {
         flex-direction: column;
@@ -52,8 +57,11 @@ padding-bottom: 50px;
     }
 }
 
+.contenedor {
+    padding: 0;
+}
 .blog {
-    background-color: rgba(247, 240,245, .2);
+    background-color: rgba(247, 240,245, .5);
     padding: 0;
     margin: 0;
     ul.links {
@@ -62,6 +70,12 @@ padding-bottom: 50px;
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         grid-gap: 50px; 
+        padding-bottom: 50px !important;
+        padding-top: 50px;
+        @media (max-width: 680px) {
+            grid-template-columns: repeat(1, 1fr);
+            text-align: center;
+        } 
         li {
             width: 100%;
             color: #5E45FF;
@@ -73,6 +87,33 @@ padding-bottom: 50px;
             }
         }
     }
+}
+
+.blogBg {
+        background-image: url('./images/blog/BlogBg.jpg');
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        height: 80vh;
+        width: 100vw;
+        margin-top: 50px;
+        position: relative;
+        @media (max-width: 680px) {
+            height: 350px;
+        }
+        h2 {
+            text-align: center;
+            padding-top: 25px;
+            font-size: 2rem;
+        }
+        img {
+            width: 350px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
 }
 
 `

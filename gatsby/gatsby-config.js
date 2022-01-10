@@ -23,7 +23,7 @@ module.exports = {
     "gatsby-plugin-react-helmet",
     "gatsby-plugin-sitemap",
     "gatsby-plugin-sharp",
-    "gatsby-plugin-smoothscroll",
+    "gatsby-plugin-anchor-links",
     "gatsby-transformer-sharp",
     {
       resolve: "gatsby-source-filesystem",
@@ -32,6 +32,22 @@ module.exports = {
         path: "./src/assets/images/",
       },
       __key: "images",
+    },
+    {
+      resolve: 'gatsby-plugin-favicons',
+      options: {
+        logo: './src/assets/images/icon.svg',
+        appName: 'Cognitive Acchievement',
+        icons: {
+          android: true,
+          appleIcon: true,
+          appleStartup: true,
+          coast: false,
+          favicons: true,
+          yandex: false,
+          windows: false
+        }
+      }
     },
   ],
 };

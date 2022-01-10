@@ -8,12 +8,12 @@ const Header = () => {
   return (
     <HeadeContainer>
       <div className="container">
-        <button onClick={() => scrollTo('#home')}><img src='./logo.svg' alt='Logo Cognitive Achievement' /></button>
+        <button onClick={() => scrollTo('#hero')}><img src='./logo.svg' alt='Logo Cognitive Achievement' /></button>
         <ul className={menu ? 'show' : 'hide'}>
           <li><button  onClick={() => scrollTo('#nosotros')}>Nosotros</button ></li>
           <li><button  onClick={() => scrollTo('#servicios')}>Servicios</button ></li>
-          <li><button  onClick={() => scrollTo('#some-id')}>Synapsis Knowledge</button ></li>
-          <li><button  onClick={() => scrollTo('#some-id')}>Contacto</button ></li>
+          <li><button  onClick={() => scrollTo('#blog')}>Synapsis Knowledge</button ></li>
+          <li><button  onClick={() => scrollTo('#contact')}>Contacto</button ></li>
         </ul>
         <button className={menu ? 'ham click' : 'ham'} onClick={() => showMenu(!menu)}>
             <div className='line'></div>
