@@ -8,11 +8,11 @@ const Blog = ({data}) => {
     return(
         <BlogContenedor id='blog'>
          <div className='container'>
-            <img className='logo' src='./images/blog/synapsis.svg' alt='Cognitive achievement logo' />
+            <img className='logo' src='./images/blog/synapsis.svg' alt='Cognitive achievement logo' data-aos="fade-up" data-aos-delay="800" data-aos-duration="800" />
          </div>
          <div className='container full blog'>
             <div className='contenedor container'>
-                <ul className='links container'>
+                <ul className='links container' data-aos="fade-up" data-aos-delay="800" data-aos-duration="800">
                 {data.sanitySynapsisKnowledge.synapsisKnowledgeLinks.map(({ _key, link, title }) => {
         return (
                     <li key={_key}><a href={link} target='_blank' rel="noreferrer" > {title}</a></li>
@@ -21,7 +21,7 @@ const Blog = ({data}) => {
                 </ul>
             </div>
          </div>
-         <div className='blogBg'>
+         <div className='blogBg' data-aos="fade-up" data-aos-delay="800" data-aos-duration="800">
          </div>
 
 
@@ -49,7 +49,7 @@ width: 100%;
             margin: 0 auto;
             width: 60%;
             padding-right: 0;
-            padding-bottom: 50px;
+            padding-bottom: 0;
         }
     }
     p {

@@ -8,12 +8,12 @@ const Contacto = () => {
     return(
         <NosotrosContenedor id='contact'>
          <div className='container'>
-            <img src='./images/contacto/talkToUs.svg' alt='Consulting network Coach community' />
-            <p>Si quisieras platicar con nosotros sobre algún tema particular, deja tu información de contacto y en el espacio de comentarios dinos sobre que tema te gustaría profundizar.</p>
+            <img src='./images/contacto/talkToUs.svg' alt='Consulting network Coach community' data-aos="fade-up" data-aos-delay="800" data-aos-duration="800"/>
+            <p data-aos="fade-up" data-aos-delay="800" data-aos-duration="800">Si quisieras platicar con nosotros sobre algún tema particular, deja tu información de contacto y en el espacio de comentarios dinos sobre que tema te gustaría profundizar.</p>
          </div>
 
-         <div className='container form'>
-            <form name='contact' netlify>
+         <div className='container form' >
+            <form name='contact' netlify data-aos="fade-up" data-aos-delay="800" data-aos-duration="800">
                 <label htmlFor='nombre'>Nombre</label>
                 <input id='nombre' type='text' name='nombre' />
                 <label htmlFor='apellido'>Apellido</label>
@@ -26,7 +26,7 @@ const Contacto = () => {
                 <textarea id='mensaje' type='text' name='mensaje'></textarea>
                 <button type='submit'>Enviar</button>
             </form>
-            <div className='whats'>
+            <div className='whats' data-aos="fade-up" data-aos-delay="800" data-aos-duration="800">
                 <p>Si prefieres podemos atenderte a trevés de nuestro Whatsapp Business </p>
                 <img src='./images/whats.png' alt='Whatsapp business button' />
             </div>
@@ -40,9 +40,15 @@ position: relative;
 width: 100%;
 padding-top: 50px;
 padding-bottom: 50px;
+@media (max-width: 680px) {
+    padding-bottom: 0;
+    }
 .container {
     display: flex;
     padding-bottom: 50px;
+    @media (max-width: 680px) {
+    padding-bottom: 0;
+    }
     p {
         align-self: center;
     }

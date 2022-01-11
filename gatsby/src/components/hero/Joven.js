@@ -8,7 +8,7 @@ const Joven = () => {
     return(
         <JovenContenedor id='joven'>
 
-            <div className='joven'>
+            <div className='joven' data-aos="fade-up" data-aos-delay="800" data-aos-duration="800">
             </div>
         </JovenContenedor>
     )
