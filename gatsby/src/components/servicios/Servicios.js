@@ -217,6 +217,7 @@ padding-bottom: 50px;
         margin-top: 50px;
         @media (max-width: 680px) {
             height: 350px;
+            background-attachment: scroll;
         }
 }
 
@@ -308,6 +309,7 @@ padding-bottom: 50px;
         margin-top: 50px;
         @media (max-width: 680px) {
             height: 350px;
+            background-attachment: scroll;
         }
 }
 .graf4 {
@@ -332,6 +334,7 @@ padding-bottom: 50px;
         margin-top: 50px;
         @media (max-width: 680px) {
             height: 350px;
+            background-attachment: scroll;
         }
 }
 
@@ -372,6 +375,7 @@ padding-bottom: 50px;
         position: relative;
         @media (max-width: 680px) {
             height: 350px;
+            background-attachment: scroll;
         }
         h2 {
             text-align: center;
@@ -429,6 +433,7 @@ padding-bottom: 50px;
         position: relative;
         @media (max-width: 680px) {
             height: 350px;
+            background-attachment: scroll;
         }
         h2 {
             text-align: center;

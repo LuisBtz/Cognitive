@@ -101,6 +101,7 @@ width: 100%;
         position: relative;
         @media (max-width: 680px) {
             height: 350px;
+            background-attachment: scroll;
         }
         h2 {
             text-align: center;

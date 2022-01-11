@@ -34,19 +34,22 @@ video {
       width: 100%;
       height: 100%;
       object-fit: contain;
-      /*@media (max-width: 680px) {
+      @media (max-width: 680px) {
           display: none;
-      }*/
     }
-    .movil.image {
+
+
+}
+
+.movil.image {
         display: none;
-        /* @media (max-width: 680px) {
+        @media (max-width: 680px) {
             padding-top: 2px;
             display: block;
             height: 100%;
             width: 100%;
             position: relative;
-        } */
+        }
         h1 {
             position: absolute;
             top: 50%;
@@ -58,11 +61,6 @@ video {
             background: rgba(0, 0, 0, 0.3);
         }
     }
-
-
-
-
-
 `
 
 export default Video;

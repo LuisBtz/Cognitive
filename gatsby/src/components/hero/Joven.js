@@ -28,6 +28,7 @@ display: flex;
         width: 100vw;
         @media (max-width: 680px) {
             height: 350px;
+            background-attachment: scroll;
         }
 }
 
