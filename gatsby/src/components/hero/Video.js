@@ -18,8 +18,6 @@ const Video = () => {
                     alt="A dinosaur"
                     placeholder="blurred"
                     layout="fullWidth"
-                    width={200}
-                    height={200}
                 />
                 <h1>Cognitive Achievement</h1>
             </div>

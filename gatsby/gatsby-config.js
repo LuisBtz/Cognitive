@@ -14,7 +14,7 @@ module.exports = {
       options: {
         projectId: "4kw3lxki",
         dataset: "production",
-        watchMode: true,
+        token: process.env.SANITY_TOKEN,
       },
     },
     "gatsby-plugin-styled-components",
@@ -25,12 +25,10 @@ module.exports = {
     "gatsby-plugin-anchor-links",
     "gatsby-transformer-sharp",
     {
-      resolve: "gatsby-source-filesystem",
+      resolve: "gatsby-plugin-manifest",
       options: {
-        name: "images",
-        path: "./src/assets/images/",
+        icon: "src/assets/images/icon.png",
       },
-      __key: "images",
     },
     {
       resolve: 'gatsby-plugin-favicons',
