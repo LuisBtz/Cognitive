@@ -8,8 +8,7 @@ function Seo({ description, lang, image, meta, keywords, title, pathname }) {
     <StaticQuery
       query={detailsQuery}
       render={data => {
-        const metaDescription =
-          description || data.site.siteMetadata.description
+        const metaDescription = description || data.site.siteMetadata.description
         const metaImage = image ? image : null
         const metaUrl = `${data.site.siteMetadata.siteUrl}${pathname}`
         return (
@@ -18,6 +17,7 @@ function Seo({ description, lang, image, meta, keywords, title, pathname }) {
               lang,
             }}
             title={title}
+            description={description}
             titleTemplate={`%s | ${data.site.siteMetadata.title}`}
             meta={[
               {
@@ -34,7 +34,7 @@ function Seo({ description, lang, image, meta, keywords, title, pathname }) {
               },
               {
                 property: `og:description`,
-                content: metaDescription,
+                content: description,
               },
               {
                 property: `og:type`,
@@ -50,7 +50,7 @@ function Seo({ description, lang, image, meta, keywords, title, pathname }) {
               },
               {
                 name: `twitter:description`,
-                content: metaDescription,
+                content: description,
               },
               {
                 name: 'google-site-verification',

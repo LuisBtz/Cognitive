@@ -28,7 +28,9 @@ const Contacto = () => {
             </form>
             <div className='whats' data-aos="fade-up" data-aos-delay="800" data-aos-duration="800">
                 <p>Si prefieres podemos atenderte a trevés de nuestro Whatsapp Business </p>
-                <img src='./images/whats.png' alt='Whatsapp business button' />
+                <a className='whats' target='_blank' rel="noreferrer" href='https://wa.me/528181635262/?text=Mensaje desde la página web: me gustaría obtener información de los servicios'>
+                    <img src='./images/whats.png' alt='Whatsapp business button' />
+                </a>            
             </div>
          </div>
         </NosotrosContenedor>

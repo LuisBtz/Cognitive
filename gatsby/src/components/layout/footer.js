@@ -4,7 +4,7 @@ import styled from 'styled-components'
 const Footer = () => {
     return(
         <FooterContainer>
-            <a className='whats' target='_blank' rel="noreferrer" href='https://wa.me/5218112777083/?text=Mensaje desde la página web: me gustaría obtener información de los servicios'>
+            <a className='whats' target='_blank' rel="noreferrer" href='https://wa.me/528181635262/?text=Mensaje desde la página web: me gustaría obtener información de los servicios'>
                 <img src='./images/whats.png' alt='Whatsapp business button' />
             </a>
             <div className='container footer'>
@@ -44,6 +44,7 @@ width: 100%;
     }
     .contact {
         display: block;
+        opacity: 0;
         align-self: center;
         a {
             display: block;

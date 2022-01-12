@@ -19,6 +19,15 @@ export const data = graphql`
       title
     }
   }
+  sanitySettingsPage {
+    description
+    title
+    mainImage {
+      asset {
+        url
+      }
+    }
+  }
   }
 `
 
@@ -29,7 +38,7 @@ const IndexPage = ({ data }) => {
   return (
     <Layout>
       <Seo
-        title="Home Page" /*image={data.sanityHomePage.exhibitionsHF.thumbnailCover.asset.url} */
+        title={data.sanitySettingsPage.title} image={data.sanitySettingsPage.mainImage.asset.url} description={data.sanitySettingsPage.description} 
       />
      <Video />
      <Joven />
