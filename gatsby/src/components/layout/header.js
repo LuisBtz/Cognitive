@@ -5,6 +5,13 @@ import scrollTo from 'gatsby-plugin-smoothscroll';
 const Header = () => {
   const [menu, showMenu] = useState(false);
 
+
+  typeof window !== 'undefined' && window.scroll({
+    top: 300,
+    behavior: "smooth"
+  })
+
+
   return (
     <HeadeContainer>
       <div className="container">
