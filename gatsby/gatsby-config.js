@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: `Cognitive`,
+    title: `Cognitive Achievement`,
     description: `Description Cognitive`,
     author: `Cognitive`,
     siteUrl: "https://www.yourdomain.tld",
