@@ -8,6 +8,7 @@ import Servicios from "../components/servicios/Servicios";
 import Blog from "../components/blog/Blog";
 import { graphql } from 'gatsby'
 import Contacto from "../components/contacto/Contacto";
+import VideoMov from "../components/hero/VideoMov ";
 
 
 export const data = graphql`
@@ -40,9 +41,9 @@ const IndexPage = ({ data }) => {
       <Seo
         title={data.sanitySettingsPage.title} image={data.sanitySettingsPage.mainImage.asset.url} description={data.sanitySettingsPage.description} 
       />
-     <Video />
+     <Video className='desk' />
      <Joven />
-
+    <VideoMov />
      <Nosotros />
      <Servicios />
      <Blog data={data} />
@@ -50,5 +51,6 @@ const IndexPage = ({ data }) => {
     </Layout>
   );
 };
+
 
 export default IndexPage;

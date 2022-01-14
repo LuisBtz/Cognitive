@@ -7,10 +7,7 @@ const Nosotros = () => {
 
     return(
         <NosotrosContenedor id='nosotros' >
-         <div className='container' data-aos="fade-up" data-aos-delay="800" data-aos-duration="800">
-            <img src='./images/nosotros/nosotrosText.svg' alt='Consulting network Coach community' />
-            <p>El propósito de la firma es proporcionar servicio experto a empresas y personas que están convencidas que el cambio que estamos viviendo nos conduce a un replanteamiento constante de nuestras estrategias, a una reinvención y a un reimaginar un modelo diferente que nos lleve a cumplir nuestros objetivos, acompañados del mejor talento humano.</p>
-         </div>
+
          <div className='hombre' data-aos="fade-up" data-aos-delay="800" data-aos-duration="800"></div>
          <div className='container h1'>
             <h1 data-aos="fade-up" data-aos-delay="800" data-aos-duration="800">Brindamos una mirada imparcial en apoyo a la toma de decisiones</h1>

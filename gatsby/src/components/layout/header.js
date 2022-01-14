@@ -5,20 +5,14 @@ import scrollTo from 'gatsby-plugin-smoothscroll';
 const Header = () => {
   const [menu, showMenu] = useState(false);
 
-
-  typeof window !== 'undefined' && window.scroll({
-    top: 300,
-    behavior: "smooth"
-  })
-
-
   return (
     <HeadeContainer>
       <div className="container">
         <button onClick={() => scrollTo('#hero')}><img src='./logo.svg' alt='Logo Cognitive Achievement' /></button>
         <ul className={menu ? 'show' : 'hide'}>
           <li><button  onClick={() => scrollTo('#nosotros')}>Nosotros</button ></li>
-          <li><button  onClick={() => scrollTo('#servicios')}>Servicios</button ></li>
+          <li className='hero'><button  onClick={() => scrollTo('#hero')}>Video de Servicio</button ></li>
+          <li className='heroMov'><button  onClick={() => scrollTo('#heroMov')}>Video de Servicio</button ></li>
           <li><button  onClick={() => scrollTo('#blog')}>Synapsis Knowledge</button ></li>
           <li><button  onClick={() => scrollTo('#contact')}>Contacto</button ></li>
         </ul>
@@ -40,6 +34,17 @@ padding: 15px 0;
 position: fixed;
 z-index: 2;
 width: 100vw;
+.hero {
+  @media (max-width: 680px) {
+    display: none;
+  }
+}
+.heroMov {
+  display: none;
+  @media (max-width: 680px) {
+    display: block;
+  }
+}
 div {
   display: flex;
   justify-content: space-between;

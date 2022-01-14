@@ -4,10 +4,10 @@ import { StaticImage } from "gatsby-plugin-image"
 
 
 
-const Video = () => {
+const VideoMov  = () => {
 
     return(
-        <VideoContenedor id='hero'>
+        <VideoContenedor id='heroMov'>
             <video muted loop autoPlay controls poster='/images/hero.jpg'>
                 <source src='/video/video_sonido.webm' type="video/webm" />
                 <source src='/video/video_sonido.mp4' type="video/mp4" />
@@ -27,11 +27,11 @@ const Video = () => {
 
 const VideoContenedor = styled.section`
 position: relative;
-padding-top: 73px;
 width: 100%;
-display: flex;
+display: none;
+padding-top: 79px;
 @media (max-width: 680px) {
-      display: none;
+      display: flex;
     }
 video {
       width: 100%;
@@ -44,4 +44,4 @@ video {
     }
 `
 
-export default Video;
+export default VideoMov ;
