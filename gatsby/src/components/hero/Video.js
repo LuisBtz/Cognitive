@@ -29,6 +29,7 @@ const VideoContenedor = styled.section`
 position: relative;
 padding-top: 73px;
 width: 100%;
+height: 100vh;
 display: flex;
 @media (max-width: 680px) {
       display: none;
